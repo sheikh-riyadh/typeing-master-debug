@@ -148,9 +148,10 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -160,6 +161,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   padding: 20px 30px;
   color: white;
   border-radius: 15px;
@@ -168,7 +170,7 @@ button {
       rgba(255, 255, 255, 0.1) 0.18%,
       rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
-  margin-bottom: 30px;
+  text-align: center;
 }
 
 #modal-background {
