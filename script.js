@@ -22,7 +22,7 @@ fetch("./texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
-
+  let err = 0;
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
@@ -45,6 +45,7 @@ const typeController = (e) => {
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
+    errorCount++
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
   }
 
@@ -108,8 +109,6 @@ const start = () => {
 
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
-
-    console.log(count)
     // finished timer
     if (count == 0) {
       // -------------- START TYPING -----------------
