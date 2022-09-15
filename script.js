@@ -104,6 +104,10 @@ const start = () => {
   // If already started, do not start again
   if (startTime) return;
 
+
+  // Clear countdownOverlay 
+  countdownOverlay.textContent = '';
+
   let count = 3;
   countdownOverlay.style.display = "flex";
 

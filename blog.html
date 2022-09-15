@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: #2E2F2E;
+        }
+
+        .card {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            border: 2px solid #fff;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        li {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        strong {
+            font-size: 20px;
+        }
+
+        li {
+            color: cyan;
+        }
+
+        img {
+            width: 40%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="blog-card-container">
+        <!-- Blog-1 -->
+        <div class="card">
+            <!-- Blog Title -->
+            <h1>Difference between Session Storage VS Local Storage</h1>
+            <p><strong>Session Storage:</strong><br> The session storage remains in the browser as long as the browser
+                is
+                open, when the
+                browser is closed the data is removed from the session storage.
+                <li><strong>Capacity:</strong> Data store 5Mb</li>
+                <li><strong>Accessible From:</strong> Same Tab</li>
+                <li><strong>Expires:</strong> On Tab Close</li>
+            </p>
+
+            <div>
+                <p><strong>Local Storage:</strong><br> Local storage maintains data across all instances of a site,
+                    whether they're in different tabs or windows. It is also permanent, so the data won't disappear when
+                    you close your browser.
+                    <li><strong>Capacity:</strong> Data store 10Mb</li>
+                    <li><strong>Accessible From:</strong> Any Window</li>
+                    <li><strong>Expires:</strong> Naver</li>
+            </div>
+        </div>
+        <!-- Blog-2 -->
+        <div class="card">
+            <!-- Blog Title -->
+            <h1>Difference between Global Scope vs Functional Scope</h1>
+            <p><strong>Global Scope:</strong><br> if we write a variable outside of the function All scripts and
+                functions on a web page can access it
+                <li><strong>Accessible:</strong> variables can be accessed from anywhere in a JavaScript program
+                </li>
+                <li>Variables declared Globally (outside any function) have Global Scope.
+                </li>
+            </p>
+
+            <div>
+                <p><strong>Function Scope:</strong><br> If we declare a variable inside a function It can only be
+                    accessed from within the function.
+                    <li><strong>Accessible:</strong> Local variables are created when a function starts, and deleted
+                        when
+                        the function is completed.</li>
+                    <li>JavaScript has function scope: Each function creates a new scope.</li>
+                    <li>Variables defined inside a function are not accessible (visible) from outside the function.</li>
+            </div>
+        </div>
+        <!-- Blog-3 -->
+        <div class="card">
+            <!-- Blog Title -->
+            <h1>JavaScript event loop</h1>
+            <p>When our javascript file is run, it is executed line by line. During the execution, if any asynchronous
+                function is found, then it is put in the queue and the code of the next line is executed, and when all
+                the code execution is finished, the code in the queue is run, thus basically the event loop works. by
+                doing
+            </p>
+
+            <div>
+                <img src="event-loop.gif" alt="" srcset="">
+            </div>
+        </div>
+
+        <!-- Blog-4 -->
+        <div class="card">
+            <!-- Blog Title -->
+            <h1>probability of getting undefined</h1>
+            <p>An undefined variable or anything without a value will always return "undefined" in JavaScript. This is
+                not the same as null, despite the fact that both imply an empty state.
+            </p>
+
+            <div>
+                <ul>
+                    <li>When a variable is declared or initialized but no value is assigned to it, JavaScript
+                        automatically displays "undefined". It looks like this:</li>
+                    <li><strong>Array [ ]: </strong>Like you have an array you will try access a value that does't exist
+                        you will get undefined
+                    </li>
+                    <li><strong>Object { }:</strong> Same of array if you try to get a properties value but it does't
+                        exist you will get undefined</li>
+                    <li>If you declare a variable and assign undefined you will get result undefined</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
