@@ -95,11 +95,10 @@ const gameOver = () => {
 };
 
 const closeModal = () => {
-  modalBackground.classList.toggle("hidden");
-  resultModal.classList.toggle("hidden");
-
   // Refresh when user click modal close button
   location.reload()
+  modalBackground.classList.toggle("hidden");
+  resultModal.classList.toggle("hidden");
 };
 
 const start = () => {
